@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+	<title>TO DO app</title>
+	<link rel="stylesheet" type="text/css" href="includes/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="includes/bootstrap.min.css">
+    <link rel="stylesheet" href="includes/style.css">
+</head>
+<body ng-controller="ToDoCtrl">
+
+	<div class="page-header">
+		<h1>All Products</h1>
+		<section class="cartImg"><img class="cartImg" src="images/cart.png">
+			<!--<span class="label label-default">{{todo.items.length}}</span>-->
+			<span id="cartCounter" class="label label-default" ng-class="warningLevel()" ng-hide="incompleteCount() == 0">{{incompleteCount()}}</span>
+		</section>
+	</div>
+	<br><br>
+	<br><br>
+	<div class="panel">
+		<table class="table table striped">
+			<thead>
+				<tr>
+					<th>Item's Name</th>
+					<th>Price</th>
+					<th>Likes</th>
+					<th>Image</th>
+					<th>New</th>
+					<th>Designer</th>
+					<th>Add to cart</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in todo.items | orderBy: '-like_counter'">
+					<td>{{item.name}}</td><td>{{item.price}} $</td><td>{{item.like_counter}} Likes</td>
+					<td><img class="favoriteImg" src="images/{{item.img_url}}"></td><td>{{item.new}}</td><td>{{item.designer}}</td>
+					<td><input type="checkbox" ng-model="item.done"></input></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="js/lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/ToDo.js"></script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+* {
+padding:0px;
+margin:0px;
+}
+
+header,section,nav,aside,footer,main, article,a {
+display:block;
+width: 100%;
+}
+
+header {
+    width: 1005px;
+    height: 310px;
+    background-image: url(../images/headerIMG.png);
+    position:relative;
+    margin: 0 auto;
+}
+
+
+/* top navigation */
+#navigation {    
+    display: block;
+    width: 100%;
+    float: left;
+    height: 35px;
+    margin: 0px;
+    padding: 0;
+    position:absolute;
+    bottom:0;
+    opacity: 0.7;
+    background-color: black;
+	font-family: Arial;
+	font-size: 13pt;
+	font-style: normal;
+	font-variant: normal;
+}
+ 
+#navigation ul { 
+    list-style: none;
+    padding: 0px 0px;
+    height: 29px;
+}
+ 
+#navigation ul li {    
+    display: inline;
+    float: left; 
+}
+#navigation ul li a { 
+    width: 179px;
+    height: 28px;
+    display: block; 
+    padding: 0 8px; 
+    color: #fff;
+    font-size: 10pt;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold; 
+    margin-right: 6px;
+    margin-top: 11px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#navigation ul li a:hover {
+    color: #a8d6e7;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.openfooter {
+    height: 124px;
+    width: 1005px;
+    background-image: url(../images/openfooter.png);
+    margin: 0 auto;
+}
+
+.loginpanel {
+    float: left;
+    margin: 12px 40px auto;
+}
+
+.loginpanel li {
+    margin-left: 98px;
+    padding-bottom: 5px;
+    width: 195px;
+    list-style-type: none;
+}
+
+.loginpanel input {
+    width: 190px;
+    height: 17px;
+    background-color: #171717;
+    border: 1px solid #423e3e;
+    color: white;
+}
+
+.openfooter .submitbtn {
+    background-image: url(../images/loginbtnOF2.png);
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 56px;
+    margin-left: 161px;
+    margin-top: 29px;
+    border: 1px solid #423e3e;
+    border-radius: 1px;
+}
+
+.openfooter .resetbtn {
+    background-image: url(../images/resetbtn.png);
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 56px;
+    margin-left: 12px;
+    margin-top: 29px;
+    border: 1px solid #423e3e;
+    border-radius: 1px;
+}
+
+.openfooterblack {
+    height: 124px;
+    width: 1005px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+/*
+.openfooterblack a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+*/
+
+footer {
+    height: 32px;
+    width: 1005px;
+    background-image: url(../images/footer.png);
+    background-repeat: no-repeat; 
+    margin: 0 auto;
+}
+/*
+
+#login .loginbtnfooter {
+    background-repeat: no-repeat;
+    height: 15px;
+    background-image: url(/images/loginfooter.png);
+    width: 35px;
+    margin-left: 41px;
+    margin-top: 9px;
+    display: inline-block;
+}
+*/
+
+#login .loginbtnfooter a {
+    background-repeat: no-repeat;
+    height: 15px;
+    background-image: url(../images/loginfooter.png);
+    width: 35px;
+    margin-left: 42px;
+    margin-top: 10px;
+    display: inline-block;
+    float: left;
+}
+
+#login .logoutbtnfooter a {
+    background-repeat: no-repeat;
+    height: 15px;
+    background-image: url(../images/logoutfooter.png);
+    width: 40px;
+    margin-left: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    float: left;
+}
+
+#login .googlebtn a {
+    background-repeat: no-repeat;
+    height: 27px;
+    width: 30px;
+    background-image: url(../images/googlebtn.png);
+    margin-left: 30px;
+    margin-top: 3px;
+    display: inline-block;
+    float: left;
+}
+
+#login .onlineshop a {
+    background-repeat: no-repeat;
+    height: 30px;
+    background-image: url(../images/onlineShop.png);
+    width: 175px;
+    margin-left: 256px;
+    margin-top: 11px;
+    display: inline-block;
+    float: left;
+}
+
+#login .onlineshoppressed a {
+    background-repeat: no-repeat;
+    height: 30px;
+    background-image: url(../images/onlineShopPressed.png);
+    width: 175px;
+    margin-left: 316px;
+    margin-top: 0px;
+    display: inline-block;
+    float: left;
+}
+
+/*
+#login .content {    
+    line-height: 20px;
+    display: inline-block;
+    background-image: url(/images/loginfooter.png);
+}
+*/
+
+#wrapper {
+    width: 1005px;
+    margin: auto;
+    height: 337px;
+    background-image: url(../images/mainArea.png);
+    background-repeat: no-repeat; 
+}
+
+#menuWrapper {
+    width: 1005px;
+    margin: auto;
+    height: 699px;
+    background-image: url(../images/designersPage.png);
+    background-repeat: no-repeat; 
+}
+
+#menuWrapper .backarrow a {
+    width: 31px;
+    height: 40px;
+    background-image: url(../images/leftarrow.png);
+    background-repeat: no-repeat; 
+    display: inline-block;
+    float: left;
+    margin-top: 88px;
+    margin-left: 2px;
+}
+
+#menuWrapperCategories {
+    width: 1005px;
+    margin: auto;
+    height: 699px;
+    background-image: url(../images/mainCategories.png);
+    background-repeat: no-repeat; 
+}
+
+#menuWrapperCategories .backarrow a {
+    width: 31px;
+    height: 40px;
+    background-image: url(../images/leftarrow.png);
+    background-repeat: no-repeat; 
+    display: inline-block;
+    float: left;
+    margin-top: 87px;
+    margin-left: 0px;
+}
+#wrapper .designerbtn a {
+    background-image: url(../images/designers.png);
+    background-repeat: no-repeat;
+    width: 114px;
+    height: 14px;
+    margin-left: 445px;
+    margin-top: 238px;
+    display: inline-block;
+    float: left;
+}
+
+.itemsGallery {
+    width: 666px;
+    height: 501px;
+    margin-left: 265px;
+    margin-top: 199px;
+    display: inline-block;
+    float: left;
+}
+
+.favoriteImg {
+    height: 120px;
+}
+
+h1 {
+    float: left;
+    width: 300px;
+}
+.cartImg {
+    width:50px;
+    float: left;
+    margin-top:8px;
+    background-image: url("../images/cart.png");
+}
+
+#cartCounter {
+    margin-top: -29px;
+}
+
+.inputParam {
+    float: left;
+    width: 120px;
+}
+
+h5 {
+    float:left;
+    font-size: 130%;
+    margin-top: 3px;
+    margin-left: 30px;
+}
+
+.uploadFile {
+    float: left;
+}
+
+.designerName {
+    float: left;
+    width: 50px;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-left: 100px;
+    color: #ffffff;
+}
+#mainContents {
+    width: 100%;
+    height: 0px;
+    background-color: #000000;
+    padding-left: 50px;
+}
+
+#designersDiv {
+    width: 239px;
+    height: 550px;
+    background-color: #000000;
+    float: left;
+    margin-left: 137px;
+    margin-top: 142px;
+}
+
+.clear { clear:both; }
+
+
+    /* JQuery Gallery*/
+
+ .jssorb01 {
+    position: absolute;
+}
+
+.jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 12px;
+    height: 12px;
+    filter: alpha(opacity=70);
+    opacity: .7;
+    overflow: hidden;
+    cursor: pointer;
+    border: #000 1px solid;
+}
+
+.jssorb01 div { background-color: gray; }
+.jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+.jssorb01 .av { background-color: #fff; }
+.jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+
+.jssora13l, .jssora13r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    background: url('img/a13.png') no-repeat;
+    overflow: hidden;
+}
+
+.jssora13l { background-position: -10px -35px; }
+.jssora13r { background-position: -70px -35px; }
+.jssora13l:hover { background-position: -130px -35px; }
+.jssora13r:hover { background-position: -190px -35px; }
+.jssora13l.jssora13ldn { background-position: -250px -35px; }
+.jssora13r.jssora13rdn { background-position: -310px -35px; }
+
+#jssor_1 {
+    position: relative; 
+    margin: 0 auto; 
+    top: 0px; 
+    left: 0px; 
+    width: 800px; 
+    height: 300px; 
+    overflow: hidden; 
+    visibility: hidden;
+}
+
+#loading {
+    position: absolute; 
+    top: 0px; 
+    left: 0px;
+}
+
+#slides {
+    cursor: default; 
+    position: relative; 
+    top: 0px; 
+    left: 0px; 
+    width: 800px; 
+    height: 300px; 
+    overflow: hidden;
+}
+
+#navigator {
+    bottom:16px;
+    right:16px;
+}
+
+#prototype {
+    width:12px;
+    height:12px;
+}
+
+.jssora13l {
+    top:0px;
+    left:30px;
+    width:40px;
+    height:50px;
+}
+
+.jssora13r {
+    top:0px;
+    right:30px;
+    width:40px;
+    height:50px;
+}
+

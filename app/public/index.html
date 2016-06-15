@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Letranger</title>
+<!--    <script src="includes/script.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="includes/style.css">
+    <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://plus.google.com/js/client:plusone.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+     <script type="text/javascript">
+    var gpclass = (function(){
+    //Defining Class Variables here
+    var response = undefined;
+    return {
+        //Class functions / Objects
+        mycoddeSignIn:function(response){
+            // The user is signed in
+            if (response['access_token']) {
+                //Get User Info from Google Plus API
+         gapi.client.load('plus','v1',this.getUserInformation);
+            } else if (response['error']) {
+                // There was an error, which means the user is not signed in.
+                //alert('There was an error: ' + authResult['error']);
+            }
+        },
+        
+        getUserInformation: function(){
+            var request = gapi.client.plus.people.get( {'userId' : 'me'} );
+            request.execute( function(profile) {
+                var email = profile['emails'].filter(function(v) {
+                    return v.type === 'account'; // Filter out the primary email
+                })[0].value;
+                var fName = profile.displayName;
+                $("#inputFullname").val(fName);
+                $("#inputEmail").val(email);
+            });
+        }
+    
+    }; //End of Return
+    })();
+    
+    function mycoddeSignIn(gpSignInResponse){
+        gpclass.mycoddeSignIn(gpSignInResponse);
+    }
+    </script>
+    
+</head>
+
+<header>
+    <nav id="navigation">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="#">FAVOURITES</a></li>
+        <li><a href="#">ARTICLES</a></li>
+        <li><a href="#">ABOUT</a></li>
+      </ul>
+    </nav>
+</header>
+
+<body ng-controller="ToDoCtrl">
+<div id="wrapper">
+    <section class="designerbtn">
+        <a href="designers.html"></a>
+    </section>
+    <div class="clear">
+    <div id="mainContents">
+        <table class="table table striped">
+            <tbody>
+                <div ng-repeat="item in todo.designers | checkedItems: todo.user | orderBy: 'name'">
+                    <section class="designerName"><a href="{{item.name}}.html">{{item.name}}</a></section>
+                </div>
+            </tbody>
+        </table>
+    </div>
+</div>    
+</body>
+<div class="openfooterblack">
+    
+</div>
+<footer>
+    <div id="login">
+        <section class="loginbtnfooter">
+        <a href="login.html"></a>
+        </section>
+        <section class="logoutbtnfooter">
+        <a href="login.html"></a>
+        </section>
+        <section id="g-signin">
+        <button class="g-signin" data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email" data-requestvisibleactions="http://schemas.google.com/AddActivity" data-clientId="851184806288-vg3dejq1l165086hv9had67egh431sj3.apps.googleusercontent.com" data-accesstype="offline" data-callback="mycoddeSignIn" data-theme="dark" data-cookiepolicy="single_host_origin">
+        </button>
+        </section>
+        <section class="onlineshop">
+        <a href="shop.html"></a>
+        </section>
+    </div>
+</footer>
+    <script type="text/javascript" src="js/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/ToDo.js"></script>
+</html>
